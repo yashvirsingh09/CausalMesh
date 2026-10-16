@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf8f5;
+  --foreground: #292524;
+  --card-bg: #fdfcf9;
+  --border: #e7e2d9;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbars for warm off-white theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f0e8;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6cec3;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8aea1;
+}
+
+/* Subtle glow animations for light background */
+@keyframes pulse-red-soft {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.4)); }
+  50% { filter: drop-shadow(0 0 2px rgba(239, 68, 68, 0.2)); }
+}
+
+@keyframes pulse-amber-soft {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.4)); }
+  50% { filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.2)); }
+}
+
+@keyframes pulse-purple-soft {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4)); }
+  50% { filter: drop-shadow(0 0 2px rgba(168, 85, 247, 0.2)); }
+}
