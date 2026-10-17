@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  falkordb:
+    image: falkordb/falkordb:latest
+    container_name: causalmesh-falkordb
+    ports:
+      - "6379:6379"
+      - "3000:3000"
+    volumes:
+      - falkordb_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: causalmesh-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - FALKORDB_HOST=falkordb
+      - FALKORDB_PORT=6379
+      - APP_ENV=production
+    depends_on:
+      falkordb:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: causalmesh-frontend
+    ports:
+      - "3001:3001"
+    environment:
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  falkordb_data:
+    name: causalmesh_falkordb_data
