@@ -309,7 +309,7 @@ export default function Dashboard() {
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold text-amber-950 uppercase tracking-wider">
-                  ⚠️ Human Approval Required: {pendingApproval.incident_id}
+                   Human Approval Required: {pendingApproval.incident_id}
                 </span>
                 <span className="px-2 py-0.5 rounded text-[10px] bg-amber-100 text-amber-800 border border-amber-300 font-semibold">
                   Playbook: {pendingApproval.playbook_name}

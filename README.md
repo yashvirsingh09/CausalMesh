@@ -1,4 +1,4 @@
-# ⚡ CausalMesh
+# CausalMesh
 ### Autonomous Site Reliability & Incident Memory Mesh Powered by FalkorDB
 
 [![FalkorDB](https://img.shields.io/badge/Context%20Layer-FalkorDB%20GraphBLAS-purple)](https://www.falkordb.com/)
@@ -14,11 +14,11 @@
 > *"The graph has to shape what the agent does, not sit on the side."*  
 > **CausalMesh** unifies live microservice topologies, git pull requests, team ownership, and executable procedural playbooks into a single high-performance **FalkorDB** graph.
 
-📺 **[Watch Demo Video (YouTube)](https://youtu.be/skAD7R8OXp8)** • 🌐 **[Live Deployment & Setup Guide](DEPLOYMENT.md)** • 🎬 **[Demo Video Script & Guide](DEMO_VIDEO_GUIDE.md)** • 📝 **[Technical Architecture Article](BLOG_POST.md)**
+**[Watch Demo Video (YouTube)](https://youtu.be/skAD7R8OXp8)** • **[Live Deployment & Setup Guide](DEPLOYMENT.md)** • **[Demo Video Script & Guide](DEMO_VIDEO_GUIDE.md)** • **[Technical Architecture Article](BLOG_POST.md)**
 
 ---
 
-## 🎯 Executive Overview
+## Executive Overview
 
 Modern cloud engineering teams run hundreds of interconnected microservices. When an alert fires at 3:00 AM, human engineers spend 45 minutes manually triaging logs, asking *"Who changed what?"* on Slack, and digging up outdated runbooks.
 
@@ -29,7 +29,7 @@ Modern cloud engineering teams run hundreds of interconnected microservices. Whe
 
 ---
 
-## 📸 Live Visuals & FalkorDB Cloud Graph
+## Live Visuals & FalkorDB Cloud Graph
 
 | Live Microservice Topology DAG (Dynamic Traversal) | FalkorDB Cloud Multi-Dimensional Knowledge Graph |
 | :---: | :---: |
@@ -38,17 +38,17 @@ Modern cloud engineering teams run hundreds of interconnected microservices. Whe
 
 ---
 
-## 📐 Core Capabilities & Architectural Pillars
+## Core Capabilities & Architectural Pillars
 
 | Architectural Pillar | Core Capability | CausalMesh Implementation |
 | :--- | :--- | :--- |
-| **🕵️ Connected Graph Intelligence** | Multi-hop reasoning, graph queries as tools, tool selection through MCP, explainable results. | • Sentinel Agent runs multi-hop Cypher queries across 25 services in $< 2\text{ms}$.<br>• Native graph algorithms as agent tools: **shortestPath** and **bottleneck centrality**.<br>• Mitigator Agent calls infrastructure tools via **Model Context Protocol (MCP)**.<br>• Full visual Cytoscape.js path animation showing exact Cypher lineage. |
-| **🤖 Procedural & Episodic Memory** | Persistent history, executable workflows, shared state handoffs, multigraph isolation. | • **Procedural Memory:** Stored executable playbooks (`(:Procedure)-[:STEP]->(:Action)-[:NEXT]->(:Action)`).<br>• **Episodic Memory:** Past incident episodes queryable via symptom matching & MTTR tracking.<br>• **Semantic Memory:** Domain failure ontology & risk rules (`(:SemanticRule)`).<br>• **Multi-Agent Handoffs:** Persistent graph handoff states (`(:AgentHandoff)`).<br>• **Multigraph Isolation:** Completely isolated `prod` vs `staging` graphs in a single FalkorDB instance. |
-| **🧠 Enterprise Knowledge Graph** | Docs, tickets, and team chats in one graph; engineer expertise discovery; decision traceability. | • Enterprise showcase query: **"Who Knows What"** engineer expertise directory.<br>• Connected graph of **Jira Tickets**, **Slack Chats**, **Git PRs**, and **Runbooks**.<br>• Instant provenance tracing linking system failures back to human merge decisions and chat channels. |
+| **Connected Graph Intelligence** | Multi-hop reasoning, graph queries as tools, tool selection through MCP, explainable results. | • Sentinel Agent runs multi-hop Cypher queries across 25 services in $< 2\text{ms}$.<br>• Native graph algorithms as agent tools: **shortestPath** and **bottleneck centrality**.<br>• Mitigator Agent calls infrastructure tools via **Model Context Protocol (MCP)**.<br>• Full visual Cytoscape.js path animation showing exact Cypher lineage. |
+| **Procedural & Episodic Memory** | Persistent history, executable workflows, shared state handoffs, multigraph isolation. | • **Procedural Memory:** Stored executable playbooks (`(:Procedure)-[:STEP]->(:Action)-[:NEXT]->(:Action)`).<br>• **Episodic Memory:** Past incident episodes queryable via symptom matching & MTTR tracking.<br>• **Semantic Memory:** Domain failure ontology & risk rules (`(:SemanticRule)`).<br>• **Multi-Agent Handoffs:** Persistent graph handoff states (`(:AgentHandoff)`).<br>• **Multigraph Isolation:** Completely isolated `prod` vs `staging` graphs in a single FalkorDB instance. |
+| **Enterprise Knowledge Graph** | Docs, tickets, and team chats in one graph; engineer expertise discovery; decision traceability. | • Enterprise showcase query: **"Who Knows What"** engineer expertise directory.<br>• Connected graph of **Jira Tickets**, **Slack Chats**, **Git PRs**, and **Runbooks**.<br>• Instant provenance tracing linking system failures back to human merge decisions and chat channels. |
 
 ---
 
-## ⚡ FalkorDB Data Model
+## FalkorDB Data Model
 
 ```cypher
 // 1. Topology & Algorithms
@@ -86,7 +86,7 @@ CREATE (ep)-[:INVOLVED]->(inv)
 
 ---
 
-## 🚀 Quickstart Guide
+## Quickstart Guide
 
 ### 1. Prerequisites
 - Python 3.12+
@@ -131,15 +131,15 @@ Open `http://localhost:3001` in your browser.
 
 ---
 
-## 📺 Live Video Demonstration
+## Live Video Demonstration
 
 [![Watch CausalMesh Demo Video](https://img.youtube.com/vi/skAD7R8OXp8/maxresdefault.jpg)](https://youtu.be/skAD7R8OXp8)
 
-> 🎬 **[Click here to watch the full CausalMesh demonstration on YouTube](https://youtu.be/skAD7R8OXp8)**
+> **[Click here to watch the full CausalMesh demonstration on YouTube](https://youtu.be/skAD7R8OXp8)**
 
 ---
 
-## 🎬 90-Second Walkthrough Routine
+## 90-Second Walkthrough Routine
 
 1. **The Baseline:** Open `http://localhost:3001`. The Cytoscape.js map displays 25 microservices in green.
 2. **The Incident Fires:** Select **"504 Gateway Timeout on /checkout"** and click **Simulate Incident**.
@@ -156,5 +156,5 @@ Open `http://localhost:3001` in your browser.
 
 ---
 
-## 🛡️ License
+## License
 Apache-2.0 © 2026 CausalMesh Contributors.

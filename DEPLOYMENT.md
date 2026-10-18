@@ -1,9 +1,9 @@
-# 🌐 CausalMesh: Live Deployment & Local Setup Guide
+# CausalMesh: Live Deployment & Local Setup Guide
 
 > **Hackathon Requirement:**  
 > *"FalkorDB must be the primary graph database, and it must support a central part of the product.*  
 > *A live deployment is preferred. Projects that cannot be deployed must include complete local setup instructions and a working demo video."*  
-> 📺 **Demo Video Walkthrough:** [https://youtu.be/skAD7R8OXp8](https://youtu.be/skAD7R8OXp8)  
+> **Demo Video Walkthrough:** [https://youtu.be/skAD7R8OXp8](https://youtu.be/skAD7R8OXp8)  
 
 This guide covers:
 1. **FalkorDB Configuration** (FalkorDB Cloud vs Local Docker vs In-Memory)
@@ -121,7 +121,7 @@ docker compose down
 - Node.js 18+ & npm
 - (Optional) Docker for live FalkorDB container
 
-### ⚡ 1-Click Startup Scripts
+### 1-Click Startup Scripts
 
 #### Windows (PowerShell):
 ```powershell
@@ -137,7 +137,7 @@ chmod +x run-dev.sh
 
 ---
 
-### 🛠️ Manual Step-by-Step Setup
+### Manual Step-by-Step Setup
 
 #### 1. Start FalkorDB (Optional):
 ```bash

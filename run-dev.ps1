@@ -1,7 +1,7 @@
 # run-dev.ps1 — Start CausalMesh Backend and Frontend in Development Mode
 
 Write-Host "==================================================" -ForegroundColor Cyan
-Write-Host "⚡ Starting CausalMesh Development Environment" -ForegroundColor Cyan
+Write-Host " Starting CausalMesh Development Environment" -ForegroundColor Cyan
 Write-Host "==================================================" -ForegroundColor Cyan
 
 $backendDir = Join-Path $PSScriptRoot "backend"

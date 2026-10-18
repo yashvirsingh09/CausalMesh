@@ -614,7 +614,7 @@ export default function ServiceMap({
 
           <div className="pt-2 border-t border-slate-100">
             <p className="text-[10px] text-slate-500">
-              💡 <span className="font-semibold text-slate-700">FalkorDB Provenance:</span> Node in{" "}
+               <span className="font-semibold text-slate-700">FalkorDB Provenance:</span> Node in{" "}
               <code className="text-indigo-600 font-semibold">{activeGraph}</code> with OpenCypher graph traversals.
             </p>
           </div>

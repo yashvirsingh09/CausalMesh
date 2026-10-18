@@ -130,7 +130,7 @@ class AgentLoop:
             # Check if it's a final answer (no tool calls)
             if not response.get("tool_calls"):
                 final = response.get("content", "")
-                await _stream(f"✅ Final answer produced")
+                await _stream(f" Final answer produced")
                 return final
 
             # Append assistant message with all tool calls ONCE before results
@@ -148,7 +148,7 @@ class AgentLoop:
                 except json.JSONDecodeError:
                     fn_args = {}
 
-                await _stream(f"🔍 Calling tool: `{fn_name}({json.dumps(fn_args, indent=None)})`")
+                await _stream(f" Calling tool: `{fn_name}({json.dumps(fn_args, indent=None)})`")
 
                 tool = self.tools.get(fn_name)
                 if tool is None:
@@ -159,7 +159,7 @@ class AgentLoop:
                     except Exception as e:
                         tool_result = {"error": str(e)}
 
-                await _stream(f"📊 Result: {json.dumps(tool_result)[:300]}")
+                await _stream(f" Result: {json.dumps(tool_result)[:300]}")
 
                 # Append tool result
                 messages.append({
@@ -168,7 +168,7 @@ class AgentLoop:
                     "content": json.dumps(tool_result),
                 })
 
-        await _stream("⚠️ Max iterations reached — returning last known state.")
+        await _stream(" Max iterations reached — returning last known state.")
         return messages[-1].get("content", "Max iterations reached.")
 
     async def _chat(self, messages: list[dict], tools: list[dict]) -> dict:

@@ -8,7 +8,7 @@ BACKEND_DIR="$SCRIPT_DIR/backend"
 FRONTEND_DIR="$SCRIPT_DIR/frontend"
 
 echo "=================================================="
-echo "⚡ Starting CausalMesh Development Environment"
+echo " Starting CausalMesh Development Environment"
 echo "=================================================="
 
 # Setup venv if missing

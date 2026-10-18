@@ -115,7 +115,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
     await broadcast_event("agent_log", {
         "agent": "SENTINEL",
         "stage": "started",
-        "message": f"🚨 Received alert: '{req.alert_name}' on {req.epicenter_service}. Traversing dependency DAG in FalkorDB...",
+        "message": f" Received alert: '{req.alert_name}' on {req.epicenter_service}. Traversing dependency DAG in FalkorDB...",
     })
     await asyncio.sleep(0.6)
 
@@ -124,7 +124,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
         await broadcast_event("agent_log", {
             "agent": "SENTINEL",
             "stage": "live_llm_mode",
-            "message": f"🤖 Sentinel Agent activated via live LLM ({LLM_PROVIDER}: {LLM_MODEL})",
+            "message": f" Sentinel Agent activated via live LLM ({LLM_PROVIDER}: {LLM_MODEL})",
         })
         try:
             sentinel = SentinelAgent()
@@ -143,7 +143,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
             await broadcast_event("agent_log", {
                 "agent": "SENTINEL",
                 "stage": "fallback",
-                "message": f"⚠️ Live LLM note: {e}. FalkorDB graph algorithmic engine proceeding.",
+                "message": f" Live LLM note: {e}. FalkorDB graph algorithmic engine proceeding.",
             })
 
     # 1A: Blast Radius Multi-Hop Walk
@@ -171,7 +171,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
             "tool": "find_critical_path",
             "params": {"source": req.epicenter_service, "target": target_leaf},
             "result": critical_path,
-            "message": f"⚡ [FalkorDB shortestPath] Critical propagation chain identified: {' -> '.join(critical_path['path'])} ({critical_path['hops']} hops)",
+            "message": f" [FalkorDB shortestPath] Critical propagation chain identified: {' -> '.join(critical_path['path'])} ({critical_path['hops']} hops)",
         })
         await asyncio.sleep(0.7)
 
@@ -184,7 +184,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
         "stage": "tool_executed",
         "tool": "compute_bottleneck_centrality",
         "result": centrality_scores[:3],
-        "message": f"📊 Bottleneck Centrality Analysis: '{top_spof}' confirmed as single point of failure (SPOF).",
+        "message": f" Bottleneck Centrality Analysis: '{top_spof}' confirmed as single point of failure (SPOF).",
     })
     await asyncio.sleep(0.7)
 
@@ -245,7 +245,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
             "stage": "who_knows",
             "tool": "who_knows_service",
             "result": smes[:3],
-            "message": f"👤 [Company Brain: Who Knows What] Subject matter experts: {sme_summary}",
+            "message": f" [Company Brain: Who Knows What] Subject matter experts: {sme_summary}",
         })
         await asyncio.sleep(0.6)
 
@@ -254,7 +254,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
         await broadcast_event("agent_log", {
             "agent": "INVESTIGATOR",
             "stage": "live_llm_mode",
-            "message": f"🤖 Root-Cause Investigator Agent activated via live LLM ({LLM_PROVIDER}: {LLM_MODEL})",
+            "message": f" Root-Cause Investigator Agent activated via live LLM ({LLM_PROVIDER}: {LLM_MODEL})",
         })
         try:
             investigator = InvestigatorAgent()
@@ -273,7 +273,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
             await broadcast_event("agent_log", {
                 "agent": "INVESTIGATOR",
                 "stage": "fallback",
-                "message": f"⚠️ Live LLM note: {e}. FalkorDB Company Brain graph provenance proceeding.",
+                "message": f" Live LLM note: {e}. FalkorDB Company Brain graph provenance proceeding.",
             })
 
     recent_prs = queries.get_recent_commits(target_service, hours=4, graph_name=req.graph_name)
@@ -298,7 +298,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
             "tool": "find_similar_incidents",
             "params": {"symptoms": scenario_cfg["symptoms"]},
             "result": similar[0],
-            "message": f"🧠 Episodic memory hit: Similar incident {similar[0]['incident_id']} resolved in {similar[0]['mttr_seconds']}s.",
+            "message": f" Episodic memory hit: Similar incident {similar[0]['incident_id']} resolved in {similar[0]['mttr_seconds']}s.",
         })
         await asyncio.sleep(0.8)
 
@@ -330,7 +330,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
     await broadcast_event("agent_log", {
         "agent": "INVESTIGATOR",
         "stage": "completed",
-        "message": f"✅ Root cause pinpointed with 100% graph provenance. Handoff to Mitigator Agent (persisted in FalkorDB).",
+        "message": f" Root cause pinpointed with 100% graph provenance. Handoff to Mitigator Agent (persisted in FalkorDB).",
         "data": investigator_report,
     })
     await asyncio.sleep(0.8)
@@ -339,7 +339,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
     await broadcast_event("agent_log", {
         "agent": "MITIGATOR",
         "stage": "started",
-        "message": f"🛠️ Querying FalkorDB Procedural Memory for playbook '{scenario_cfg['trigger_pattern']}'...",
+        "message": f" Querying FalkorDB Procedural Memory for playbook '{scenario_cfg['trigger_pattern']}'...",
     })
     await asyncio.sleep(0.6)
 
@@ -355,7 +355,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
             "playbook_name": playbook["name"] if playbook else "resolve_db_pool_starvation",
             "steps": playbook["steps"] if playbook else [],
             "target_service": target_service,
-            "message": "⏸️ Human-in-the-Loop Mode: Waiting for operator sign-off before executing infrastructure changes...",
+            "message": " Human-in-the-Loop Mode: Waiting for operator sign-off before executing infrastructure changes...",
         })
 
         approval_event = asyncio.Event()
@@ -374,14 +374,14 @@ async def _run_swarm_workflow(req: IncidentRequest):
             await broadcast_event("agent_log", {
                 "agent": "MITIGATOR",
                 "stage": "rejected",
-                "message": "❌ Remediation playbook rejected by operator. Escalated to on-call engineer.",
+                "message": " Remediation playbook rejected by operator. Escalated to on-call engineer.",
             })
             return
 
         await broadcast_event("agent_log", {
             "agent": "MITIGATOR",
             "stage": "approved",
-            "message": "✅ Operator approved remediation playbook. Proceeding with execution via MCP...",
+            "message": " Operator approved remediation playbook. Proceeding with execution via MCP...",
         })
         await asyncio.sleep(0.5)
 
@@ -390,7 +390,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
         await broadcast_event("agent_log", {
             "agent": "MITIGATOR",
             "stage": "live_llm_mode",
-            "message": f"🤖 Mitigator Agent activated via live LLM ({LLM_PROVIDER}: {LLM_MODEL})",
+            "message": f" Mitigator Agent activated via live LLM ({LLM_PROVIDER}: {LLM_MODEL})",
         })
         try:
             mitigator = MitigatorAgent()
@@ -409,7 +409,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
             await broadcast_event("agent_log", {
                 "agent": "MITIGATOR",
                 "stage": "fallback",
-                "message": f"⚠️ Live LLM note: {e}. Executing procedural playbook directly via MCP.",
+                "message": f" Live LLM note: {e}. Executing procedural playbook directly via MCP.",
             })
 
     if playbook and playbook.get("steps"):
@@ -438,7 +438,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
                 "tool": tool_name,
                 "step_name": step["name"],
                 "params": step_params,
-                "message": f"▶️ [MCP Action] Step {step['order']}: Executing `{tool_name}` ({step['name']})...",
+                "message": f"▶ [MCP Action] Step {step['order']}: Executing `{tool_name}` ({step['name']})...",
             })
 
             mcp_result = await execute_mcp_tool(tool_name, step_params)
@@ -449,7 +449,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
                 "stage": "mcp_tool_executed",
                 "tool": tool_name,
                 "result": mcp_result,
-                "message": f"✓ [MCP Action] Step {step['order']} completed: {mcp_result.get('message', 'OK')}",
+                "message": f" [MCP Action] Step {step['order']} completed: {mcp_result.get('message', 'OK')}",
             })
     else:
         steps_executed.append({"tool": "mcp_infra:patch_config", "result": {"success": True}})
@@ -476,7 +476,7 @@ async def _run_swarm_workflow(req: IncidentRequest):
         "agent": "MITIGATOR",
         "stage": "memory_persisted",
         "tool": "write_episode",
-        "message": f"💾 Episodic memory saved to FalkorDB: {incident_id} (MTTR: {mttr_seconds}s). Future agents can now query this resolution.",
+        "message": f" Episodic memory saved to FalkorDB: {incident_id} (MTTR: {mttr_seconds}s). Future agents can now query this resolution.",
     })
     await broadcast_event("path_highlight", {"nodes": affected_nodes, "status": "resolved"})
     await asyncio.sleep(0.5)

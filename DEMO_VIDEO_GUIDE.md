@@ -1,14 +1,14 @@
-# 🎬 CausalMesh: Demo Video Script & Walkthrough Guide
+# CausalMesh: Demo Video Script & Walkthrough Guide
 
 > **Hackathon Submission Requirement:**  
 > *"Projects that cannot be deployed must include complete local setup instructions and a working demo video."*  
-> 📺 **Official Demo Video:** [https://youtu.be/skAD7R8OXp8](https://youtu.be/skAD7R8OXp8)  
+> **Official Demo Video:** [https://youtu.be/skAD7R8OXp8](https://youtu.be/skAD7R8OXp8)  
 
 This guide provides a **minute-by-minute script** to record a polished **2 to 3-minute demo video** using Loom, OBS, or Screen Studio.
 
 ---
 
-## ⏱️ Video Outline (Target Length: ~2:45)
+## Video Outline (Target Length: ~2:45)
 
 | Timestamp | Segment | Visual on Screen | Key Talking Point |
 |---|---|---|---|
@@ -20,7 +20,7 @@ This guide provides a **minute-by-minute script** to record a polished **2 to 3-
 
 ---
 
-## 🎙️ Word-for-Word Script
+## Word-for-Word Script
 
 ### [0:00 - 0:30] Introduction: The 3:14 AM Problem
 **What to show:** Open the dashboard or show the architecture diagram from the README.  
@@ -47,7 +47,7 @@ This guide provides a **minute-by-minute script** to record a polished **2 to 3-
 ### [0:55 - 1:50] The Live Incident & Tri-Agent Swarm (The Core Demo)
 **What to show:**
 1. Under **Incident Trigger**, select scenario: `DB Pool Starvation (PR-88)`.
-2. Mode: `Autonomous` | Engine: `⚡ Fast Sim` (or `🤖 Live LLM`).
+2. Mode: `Autonomous` | Engine: ` Fast Sim` (or ` Live LLM`).
 3. Click **Trigger Incident**.
 4. Watch the nodes turn **RED**, the glowing yellow traversal path, the live SSE streaming log on the right, and the nodes transition to **EMERALD GREEN**.
 
@@ -97,7 +97,7 @@ This guide provides a **minute-by-minute script** to record a polished **2 to 3-
 
 ---
 
-## 💡 Quick Tips for Recording
+## Quick Tips for Recording
 - **Resolution:** 1080p (1920x1080) or 1440p.
 - **Audio:** Use a clean microphone or headset; avoid background noise.
 - **Speed:** Keep mouse movements smooth and intentional.

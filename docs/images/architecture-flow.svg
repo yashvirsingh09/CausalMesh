@@ -32,7 +32,7 @@
 
   <!-- Top Title Bar -->
   <text x="60" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">
-    ⚡ CausalMesh <tspan fill="#94a3b8" font-size="16" font-weight="400">/ Autonomous SRE &amp; Graph Intelligence Architecture</tspan>
+    CausalMesh <tspan fill="#94a3b8" font-size="16" font-weight="400">/ Autonomous SRE &amp; Graph Intelligence Architecture</tspan>
   </text>
   <rect x="1000" y="32" width="140" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1"/>
   <circle cx="1018" cy="47" r="5" fill="#10b981"/>
@@ -65,7 +65,7 @@
     <g transform="translate(20, 212)">
       <rect width="280" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
       <text x="16" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#fbbf24">Procedural Memory (Playbooks)</text>
-      <text x="16" y="46" font-family="sans-serif" font-size="11" fill="#94a3b8">Chained Action workflows: STEP ➔ NEXT</text>
+      <text x="16" y="46" font-family="sans-serif" font-size="11" fill="#94a3b8">Chained Action workflows: STEP -&gt; NEXT</text>
     </g>
 
     <g transform="translate(20, 284)">
