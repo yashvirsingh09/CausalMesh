@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d14"/>
+      <stop offset="50%" stop-color="#101522"/>
+      <stop offset="100%" stop-color="#0c0e17"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2433"/>
+      <stop offset="100%" stop-color="#141924"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="520" rx="16" fill="url(#bg)" stroke="#262d3d" stroke-width="1.5"/>
+
+  <!-- Top Title Bar -->
+  <text x="60" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">
+    ⚡ CausalMesh <tspan fill="#94a3b8" font-size="16" font-weight="400">/ Autonomous SRE &amp; Graph Intelligence Architecture</tspan>
+  </text>
+  <rect x="1000" y="32" width="140" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="1018" cy="47" r="5" fill="#10b981"/>
+  <text x="1032" y="52" font-family="sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">FalkorDB Cloud</text>
+
+  <!-- Flow Arrows -->
+  <path d="M 380 270 L 440 270" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <path d="M 760 270 L 820 270" stroke="#475569" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Box 1: FalkorDB Graph Layer -->
+  <g transform="translate(60, 95)">
+    <rect width="320" height="375" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.2"/>
+    <rect x="0" y="0" width="320" height="48" rx="12" fill="#1e293b"/>
+    <rect x="20" y="16" width="16" height="16" rx="4" fill="#a855f7"/>
+    <text x="46" y="29" font-family="sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">1. FalkorDB Context Engine</text>
+
+    <!-- Sub items -->
+    <g transform="translate(20, 68)">
+      <rect width="280" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#c084fc">Microservice Topology DAG</text>
+      <text x="16" y="46" font-family="sans-serif" font-size="11" fill="#94a3b8">25 Services • 26 Dependencies • CALLS edges</text>
+    </g>
+
+    <g transform="translate(20, 140)">
+      <rect width="280" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#38bdf8">Company Brain (Knowledge Graph)</text>
+      <text x="16" y="46" font-family="sans-serif" font-size="11" fill="#94a3b8">Engineers • PR Diffs • Jira Tickets • Slack Logs</text>
+    </g>
+
+    <g transform="translate(20, 212)">
+      <rect width="280" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#fbbf24">Procedural Memory (Playbooks)</text>
+      <text x="16" y="46" font-family="sans-serif" font-size="11" fill="#94a3b8">Chained Action workflows: STEP ➔ NEXT</text>
+    </g>
+
+    <g transform="translate(20, 284)">
+      <rect width="280" height="60" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#34d399">Episodic &amp; Semantic Memory</text>
+      <text x="16" y="46" font-family="sans-serif" font-size="11" fill="#94a3b8">Past incident solutions • Failure Ontologies</text>
+    </g>
+  </g>
+
+  <!-- Box 2: Autonomous Tri-Agent Swarm -->
+  <g transform="translate(440, 95)">
+    <rect width="320" height="375" rx="12" fill="url(#cardGrad)" stroke="#6366f1" stroke-width="1.5"/>
+    <rect x="0" y="0" width="320" height="48" rx="12" fill="#312e81"/>
+    <rect x="20" y="16" width="16" height="16" rx="4" fill="#818cf8"/>
+    <text x="46" y="29" font-family="sans-serif" font-size="14" font-weight="700" fill="#ffffff">2. Autonomous Tri-Agent Swarm</text>
+
+    <!-- Agent 1 -->
+    <g transform="translate(20, 68)">
+      <rect width="280" height="85" rx="8" fill="#0f172a" stroke="#312e81"/>
+      <circle cx="24" cy="24" r="8" fill="#ef4444"/>
+      <text x="40" y="28" font-family="sans-serif" font-size="12" font-weight="700" fill="#f87171">Sentinel Agent</text>
+      <text x="16" y="50" font-family="sans-serif" font-size="11" fill="#cbd5e1">Multi-hop graph walk for affected area</text>
+      <text x="16" y="68" font-family="monospace" font-size="10" fill="#a5b4fc">shortestPath((src)-[:CALLS*]->(dst))</text>
+    </g>
+
+    <!-- Agent 2 -->
+    <g transform="translate(20, 165)">
+      <rect width="280" height="85" rx="8" fill="#0f172a" stroke="#312e81"/>
+      <circle cx="24" cy="24" r="8" fill="#f59e0b"/>
+      <text x="40" y="28" font-family="sans-serif" font-size="12" font-weight="700" fill="#fbbf24">Investigator Agent</text>
+      <text x="16" y="50" font-family="sans-serif" font-size="11" fill="#cbd5e1">Correlates failing pods with git commits</text>
+      <text x="16" y="68" font-family="monospace" font-size="10" fill="#a5b4fc">MATCH (pr)-[:MODIFIED_SERVICE]->(s)</text>
+    </g>
+
+    <!-- Agent 3 -->
+    <g transform="translate(20, 262)">
+      <rect width="280" height="95" rx="8" fill="#0f172a" stroke="#312e81"/>
+      <circle cx="24" cy="24" r="8" fill="#10b981"/>
+      <text x="40" y="28" font-family="sans-serif" font-size="12" font-weight="700" fill="#34d399">Mitigator Agent</text>
+      <text x="16" y="50" font-family="sans-serif" font-size="11" fill="#cbd5e1">Human-in-the-Loop Safety signoff</text>
+      <text x="16" y="68" font-family="sans-serif" font-size="11" fill="#cbd5e1">Executes repair via Model Context Protocol</text>
+      <text x="16" y="86" font-family="monospace" font-size="10" fill="#a5b4fc">mcp_k8s:rollout_restart</text>
+    </g>
+  </g>
+
+  <!-- Box 3: Outcomes & Dashboard -->
+  <g transform="translate(820, 95)">
+    <rect width="320" height="375" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.2"/>
+    <rect x="0" y="0" width="320" height="48" rx="12" fill="#1e293b"/>
+    <rect x="20" y="16" width="16" height="16" rx="4" fill="#10b981"/>
+    <text x="46" y="29" font-family="sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">3. Real-Time Observability</text>
+
+    <!-- Metrics Highlight -->
+    <g transform="translate(20, 68)">
+      <rect width="280" height="80" rx="8" fill="#064e3b" stroke="#059669"/>
+      <text x="16" y="28" font-family="sans-serif" font-size="11" font-weight="600" fill="#a7f3d0">MEAN TIME TO REMEDIATION (MTTR)</text>
+      <text x="16" y="62" font-family="sans-serif" font-size="32" font-weight="900" fill="#34d399">18.4s</text>
+      <text x="120" y="60" font-family="sans-serif" font-size="12" fill="#6ee7b7">vs 45 min manual triage</text>
+    </g>
+
+    <g transform="translate(20, 160)">
+      <rect width="280" height="90" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#38bdf8">Live Cytoscape Dynamic Canvas</text>
+      <text x="16" y="48" font-family="sans-serif" font-size="11" fill="#94a3b8">• Glowing animated traversal paths</text>
+      <text x="16" y="66" font-family="sans-serif" font-size="11" fill="#94a3b8">• Multi-graph isolation (prod / staging)</text>
+      <text x="16" y="84" font-family="sans-serif" font-size="11" fill="#94a3b8">• Sub-millisecond SSE reasoning stream</text>
+    </g>
+
+    <g transform="translate(20, 262)">
+      <rect width="280" height="95" rx="8" fill="#0f172a" stroke="#1e293b"/>
+      <text x="16" y="26" font-family="sans-serif" font-size="12" font-weight="700" fill="#c084fc">Automated Postmortems</text>
+      <text x="16" y="48" font-family="sans-serif" font-size="11" fill="#94a3b8">• Root-cause attribution to PR &amp; author</text>
+      <text x="16" y="66" font-family="sans-serif" font-size="11" fill="#94a3b8">• Preventive CI/CD action items</text>
+      <text x="16" y="84" font-family="sans-serif" font-size="11" fill="#94a3b8">• Saved to FalkorDB for next time</text>
+    </g>
+  </g>
+</svg>
