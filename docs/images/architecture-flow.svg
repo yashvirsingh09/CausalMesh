@@ -1,161 +1,140 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients with Warm Undertones -->
+    <!-- Background Gradients with Warm Charcoal & Amber Undertones -->
     <linearGradient id="canvasBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e0a12"/>
-      <stop offset="45%" stop-color="#140f1a"/>
-      <stop offset="100%" stop-color="#0b080e"/>
+      <stop offset="0%" stop-color="#110d0a"/>
+      <stop offset="50%" stop-color="#17120e"/>
+      <stop offset="100%" stop-color="#0d0a08"/>
     </linearGradient>
 
-    <!-- Warm Ambient Glow Gradients -->
+    <!-- Warm Atmospheric Amber & Terracotta Glows (No Purple) -->
     <radialGradient id="glowTopLeft" cx="20%" cy="15%" r="55%">
-      <stop offset="0%" stop-color="#f97316" stop-opacity="0.14"/>
-      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.06"/>
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#d97706" stop-opacity="0.04"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
     <radialGradient id="glowCenter" cx="50%" cy="40%" r="50%">
-      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.10"/>
-      <stop offset="60%" stop-color="#ec4899" stop-opacity="0.04"/>
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.12"/>
+      <stop offset="60%" stop-color="#b45309" stop-opacity="0.03"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
     <radialGradient id="glowBottomRight" cx="85%" cy="85%" r="60%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.12"/>
-      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.05"/>
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#ea580c" stop-opacity="0.04"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Card Backgrounds -->
+    <!-- Card Backgrounds: Warm Obsidian / Espresso -->
     <linearGradient id="warmCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1c1624"/>
-      <stop offset="100%" stop-color="#130f18"/>
+      <stop offset="0%" stop-color="#1d1713"/>
+      <stop offset="100%" stop-color="#14100d"/>
     </linearGradient>
 
     <linearGradient id="swarmCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#241a2c"/>
-      <stop offset="100%" stop-color="#16101c"/>
+      <stop offset="0%" stop-color="#261b14"/>
+      <stop offset="100%" stop-color="#17110d"/>
     </linearGradient>
 
-    <!-- Accent Gradients -->
-    <linearGradient id="sunsetGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f97316"/>
-      <stop offset="50%" stop-color="#fb923c"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
-    </linearGradient>
-
-    <linearGradient id="warmPurpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#f472b6"/>
-    </linearGradient>
-
-    <linearGradient id="warmAmberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#f97316"/>
-    </linearGradient>
-
-    <linearGradient id="warmEmeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#34d399"/>
-      <stop offset="100%" stop-color="#10b981"/>
-    </linearGradient>
-
+    <!-- Gradients -->
     <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fff7ed"/>
-      <stop offset="60%" stop-color="#ffedd5"/>
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="60%" stop-color="#fef3c7"/>
       <stop offset="100%" stop-color="#fed7aa"/>
     </linearGradient>
 
     <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#f97316" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#ea580c" flood-opacity="0.18"/>
     </filter>
   </defs>
 
   <!-- Background Canvas -->
-  <rect width="1200" height="520" rx="16" fill="url(#canvasBg)" stroke="#382944" stroke-width="1.5"/>
+  <rect width="1200" height="520" rx="16" fill="url(#canvasBg)" stroke="#3d2a1d" stroke-width="1.5"/>
 
-  <!-- Warm Ambient Lighting Layers -->
+  <!-- Warm Atmospheric Glows -->
   <rect width="1200" height="520" rx="16" fill="url(#glowTopLeft)"/>
   <rect width="1200" height="520" rx="16" fill="url(#glowCenter)"/>
   <rect width="1200" height="520" rx="16" fill="url(#glowBottomRight)"/>
 
   <!-- Top Title Bar -->
   <text x="60" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="url(#titleGrad)" letter-spacing="-0.5">
-    CausalMesh <tspan fill="#b8a898" font-size="16" font-weight="400">/ Autonomous SRE &amp; Graph Intelligence Architecture</tspan>
+    CausalMesh <tspan fill="#a89a8c" font-size="16" font-weight="400">/ Autonomous SRE &amp; Graph Intelligence Architecture</tspan>
   </text>
   
   <!-- FalkorDB Cloud Pill Badge -->
-  <rect x="990" y="32" width="150" height="32" rx="16" fill="#241a2a" stroke="#4d3358" stroke-width="1.2"/>
+  <rect x="990" y="32" width="150" height="32" rx="16" fill="#241911" stroke="#54371f" stroke-width="1.2"/>
   <circle cx="1008" cy="48" r="5" fill="#f59e0b"/>
   <text x="1022" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fef3c7">FalkorDB Cloud</text>
 
   <!-- Flow Connector Lines -->
-  <path d="M 380 270 L 440 270" stroke="#785982" stroke-width="2" stroke-dasharray="6,4"/>
-  <path d="M 760 270 L 820 270" stroke="#785982" stroke-width="2" stroke-dasharray="6,4"/>
+  <path d="M 380 270 L 440 270" stroke="#785033" stroke-width="2" stroke-dasharray="6,4"/>
+  <path d="M 760 270 L 820 270" stroke="#785033" stroke-width="2" stroke-dasharray="6,4"/>
 
   <!-- Box 1: FalkorDB Context Engine -->
   <g transform="translate(60, 95)">
-    <rect width="320" height="375" rx="14" fill="url(#warmCardGrad)" stroke="#44324f" stroke-width="1.2"/>
-    <rect x="0" y="0" width="320" height="48" rx="14" fill="#261c30"/>
-    <rect x="20" y="16" width="16" height="16" rx="4" fill="#c084fc"/>
-    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#fdf4ff">1. FalkorDB Context Engine</text>
+    <rect width="320" height="375" rx="14" fill="url(#warmCardGrad)" stroke="#453123" stroke-width="1.2"/>
+    <rect x="0" y="0" width="320" height="48" rx="14" fill="#281c15"/>
+    <rect x="20" y="16" width="16" height="16" rx="4" fill="#f59e0b"/>
+    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#fffbeb">1. FalkorDB Context Engine</text>
 
-    <!-- Sub item 1 -->
+    <!-- Sub item 1: Topology -->
     <g transform="translate(20, 68)">
-      <rect width="280" height="60" rx="8" fill="#17111f" stroke="#362540"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#d8b4fe">Microservice Topology DAG</text>
-      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">25 Services • 26 Dependencies • CALLS edges</text>
+      <rect width="280" height="60" rx="8" fill="#181310" stroke="#38271c"/>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fcd34d">Microservice Topology DAG</text>
+      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">25 Services • 26 Dependencies • CALLS edges</text>
     </g>
 
-    <!-- Sub item 2 -->
+    <!-- Sub item 2: Company Brain -->
     <g transform="translate(20, 140)">
-      <rect width="280" height="60" rx="8" fill="#17111f" stroke="#362540"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fdba74">Company Brain (Knowledge Graph)</text>
-      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">Engineers • PR Diffs • Jira Tickets • Slack Logs</text>
+      <rect width="280" height="60" rx="8" fill="#181310" stroke="#38271c"/>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fb923c">Company Brain (Knowledge Graph)</text>
+      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">Engineers • PR Diffs • Jira Tickets • Slack Logs</text>
     </g>
 
-    <!-- Sub item 3 -->
+    <!-- Sub item 3: Playbooks -->
     <g transform="translate(20, 212)">
-      <rect width="280" height="60" rx="8" fill="#17111f" stroke="#362540"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fde047">Procedural Memory (Playbooks)</text>
-      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">Chained Action workflows: STEP -&gt; NEXT</text>
+      <rect width="280" height="60" rx="8" fill="#181310" stroke="#38271c"/>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fdba74">Procedural Memory (Playbooks)</text>
+      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">Chained Action workflows: STEP -&gt; NEXT</text>
     </g>
 
-    <!-- Sub item 4 -->
+    <!-- Sub item 4: Memory -->
     <g transform="translate(20, 284)">
-      <rect width="280" height="60" rx="8" fill="#17111f" stroke="#362540"/>
+      <rect width="280" height="60" rx="8" fill="#181310" stroke="#38271c"/>
       <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#6ee7b7">Episodic &amp; Semantic Memory</text>
-      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">Past incident solutions • Failure Ontologies</text>
+      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">Past incident solutions • Failure Ontologies</text>
     </g>
   </g>
 
-  <!-- Box 2: Autonomous Tri-Agent Swarm (Highlighted Card with Warm Sunset Border) -->
+  <!-- Box 2: Autonomous Tri-Agent Swarm (Glowing Terracotta / Amber Highlight) -->
   <g transform="translate(440, 95)" filter="url(#cardGlow)">
     <rect width="320" height="375" rx="14" fill="url(#swarmCardGrad)" stroke="#f97316" stroke-width="1.8"/>
-    <rect x="0" y="0" width="320" height="48" rx="14" fill="#381d28"/>
+    <rect x="0" y="0" width="320" height="48" rx="14" fill="#382015"/>
     <rect x="20" y="16" width="16" height="16" rx="4" fill="#f97316"/>
     <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff7ed">2. Autonomous Tri-Agent Swarm</text>
 
-    <!-- Agent 1 -->
+    <!-- Agent 1: Sentinel -->
     <g transform="translate(20, 68)">
-      <rect width="280" height="85" rx="8" fill="#1c1322" stroke="#522735"/>
-      <circle cx="24" cy="24" r="8" fill="#f43f5e"/>
-      <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fb7185">Sentinel Agent</text>
+      <rect width="280" height="85" rx="8" fill="#1e1611" stroke="#542e1d"/>
+      <circle cx="24" cy="24" r="8" fill="#ef4444"/>
+      <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#f87171">Sentinel Agent</text>
       <text x="16" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fed7aa">Multi-hop graph walk for affected area</text>
-      <text x="16" y="68" font-family="monospace" font-size="10" fill="#fbcfe8">shortestPath((src)-[:CALLS*]->(dst))</text>
+      <text x="16" y="68" font-family="monospace" font-size="10" fill="#fed7aa">shortestPath((src)-[:CALLS*]->(dst))</text>
     </g>
 
-    <!-- Agent 2 -->
+    <!-- Agent 2: Investigator -->
     <g transform="translate(20, 165)">
-      <rect width="280" height="85" rx="8" fill="#1c1322" stroke="#522735"/>
+      <rect width="280" height="85" rx="8" fill="#1e1611" stroke="#542e1d"/>
       <circle cx="24" cy="24" r="8" fill="#f59e0b"/>
       <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fbbf24">Investigator Agent</text>
       <text x="16" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fed7aa">Correlates failing pods with git commits</text>
       <text x="16" y="68" font-family="monospace" font-size="10" fill="#fde68a">MATCH (pr)-[:MODIFIED_SERVICE]->(s)</text>
     </g>
 
-    <!-- Agent 3 -->
+    <!-- Agent 3: Mitigator -->
     <g transform="translate(20, 262)">
-      <rect width="280" height="95" rx="8" fill="#1c1322" stroke="#522735"/>
+      <rect width="280" height="95" rx="8" fill="#1e1611" stroke="#542e1d"/>
       <circle cx="24" cy="24" r="8" fill="#10b981"/>
       <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#34d399">Mitigator Agent</text>
       <text x="16" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fed7aa">Human-in-the-Loop Safety signoff</text>
@@ -166,33 +145,35 @@
 
   <!-- Box 3: Outcomes & Observability -->
   <g transform="translate(820, 95)">
-    <rect width="320" height="375" rx="14" fill="url(#warmCardGrad)" stroke="#44324f" stroke-width="1.2"/>
-    <rect x="0" y="0" width="320" height="48" rx="14" fill="#261c30"/>
+    <rect width="320" height="375" rx="14" fill="url(#warmCardGrad)" stroke="#453123" stroke-width="1.2"/>
+    <rect x="0" y="0" width="320" height="48" rx="14" fill="#281c15"/>
     <rect x="20" y="16" width="16" height="16" rx="4" fill="#f59e0b"/>
-    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#fff7ed">3. Real-Time Observability</text>
+    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#fffbeb">3. Real-Time Observability</text>
 
-    <!-- Metrics Highlight (Warm Emerald Badge with Amber Accent) -->
+    <!-- Metrics Highlight: Warm Emerald Badge -->
     <g transform="translate(20, 68)">
-      <rect width="280" height="80" rx="8" fill="#1b2a22" stroke="#10b981" stroke-width="1.2"/>
+      <rect width="280" height="80" rx="8" fill="#1b2a20" stroke="#10b981" stroke-width="1.2"/>
       <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#6ee7b7">MEAN TIME TO REMEDIATION (MTTR)</text>
       <text x="16" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="900" fill="#34d399">18.4s</text>
       <text x="120" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#fed7aa">vs 45 min manual triage</text>
     </g>
 
+    <!-- Cytoscape Canvas -->
     <g transform="translate(20, 160)">
-      <rect width="280" height="90" rx="8" fill="#17111f" stroke="#362540"/>
+      <rect width="280" height="90" rx="8" fill="#181310" stroke="#38271c"/>
       <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#fb923c">Live Cytoscape Dynamic Canvas</text>
-      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">• Glowing animated traversal paths</text>
-      <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">• Multi-graph isolation (prod / staging)</text>
-      <text x="16" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">• Sub-millisecond SSE reasoning stream</text>
+      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">• Glowing animated traversal paths</text>
+      <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">• Multi-graph isolation (prod / staging)</text>
+      <text x="16" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">• Sub-millisecond SSE reasoning stream</text>
     </g>
 
+    <!-- Postmortems -->
     <g transform="translate(20, 262)">
-      <rect width="280" height="95" rx="8" fill="#17111f" stroke="#362540"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#f472b6">Automated Postmortems</text>
-      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">• Root-cause attribution to PR &amp; author</text>
-      <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">• Preventive CI/CD action items</text>
-      <text x="16" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a8c4">• Saved to FalkorDB for next time</text>
+      <rect width="280" height="95" rx="8" fill="#181310" stroke="#38271c"/>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#f59e0b">Automated Postmortems</text>
+      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">• Root-cause attribution to PR &amp; author</text>
+      <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">• Preventive CI/CD action items</text>
+      <text x="16" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#b8a89a">• Saved to FalkorDB for next time</text>
     </g>
   </g>
 </svg>
