@@ -7,7 +7,7 @@
       <stop offset="100%" stop-color="#f0ebe2"/>
     </linearGradient>
 
-    <!-- Card Background: Crisp White with Warm Glow -->
+    <!-- Card Background: Crisp White -->
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="100%" stop-color="#fdfcfb"/>
@@ -15,140 +15,143 @@
 
     <!-- Swarm Card Gradient -->
     <linearGradient id="swarmBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fffdfa"/>
-      <stop offset="100%" stop-color="#faf5ee"/>
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fffaf5"/>
     </linearGradient>
 
-    <!-- Soft Warm Drop Shadows -->
+    <!-- Soft Drop Shadows -->
     <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#78593d" flood-opacity="0.06"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#5c4838" flood-opacity="0.08"/>
     </filter>
 
     <filter id="swarmShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#c2410c" flood-opacity="0.10"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#ea580c" flood-opacity="0.12"/>
     </filter>
   </defs>
 
-  <!-- Background Canvas: Off-white with gentle warm yellow/brown linen tint -->
+  <!-- Background Canvas -->
   <rect width="1200" height="520" rx="16" fill="url(#canvasBg)" stroke="#ded6cb" stroke-width="1.5"/>
 
   <!-- Top Title Bar -->
-  <text x="60" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#241a14" letter-spacing="-0.5">
-    CausalMesh <tspan fill="#7d6d5e" font-size="16" font-weight="500">/ Autonomous SRE &amp; Graph Intelligence Architecture</tspan>
+  <text x="60" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#0f172a" letter-spacing="-0.5">
+    CausalMesh <tspan fill="#475569" font-size="16" font-weight="500">/ Autonomous SRE &amp; Graph Intelligence Architecture</tspan>
   </text>
   
   <!-- FalkorDB Cloud Pill Badge -->
-  <rect x="980" y="32" width="160" height="32" rx="16" fill="#f0ebe2" stroke="#d5c8b6" stroke-width="1.2"/>
+  <rect x="980" y="32" width="160" height="32" rx="16" fill="#f1ece4" stroke="#d5c8b6" stroke-width="1.2"/>
   <circle cx="998" cy="48" r="5" fill="#d97706"/>
-  <text x="1012" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#453120">FalkorDB Cloud</text>
+  <text x="1012" y="53" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#1e293b">FalkorDB Cloud</text>
 
   <!-- Flow Connector Lines -->
-  <path d="M 380 270 L 440 270" stroke="#bdaea0" stroke-width="2" stroke-dasharray="6,4"/>
-  <path d="M 760 270 L 820 270" stroke="#bdaea0" stroke-width="2" stroke-dasharray="6,4"/>
+  <path d="M 380 270 L 440 270" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4"/>
+  <path d="M 760 270 L 820 270" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4"/>
 
   <!-- Box 1: FalkorDB Context Engine -->
   <g transform="translate(60, 95)" filter="url(#subtleShadow)">
-    <rect width="320" height="375" rx="14" fill="url(#cardBg)" stroke="#e3dacd" stroke-width="1.2"/>
-    <rect x="0" y="0" width="320" height="48" rx="14" fill="#f7f2eb"/>
+    <rect width="320" height="375" rx="14" fill="url(#cardBg)" stroke="#e2d9cd" stroke-width="1.2"/>
+    <rect x="0" y="0" width="320" height="48" rx="14" fill="#f8f4ee"/>
     <rect x="20" y="16" width="16" height="16" rx="4" fill="#d97706"/>
-    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#241a14">1. FalkorDB Context Engine</text>
+    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#0f172a">1. FalkorDB Context Engine</text>
 
     <!-- Sub item 1: Topology -->
     <g transform="translate(20, 68)">
       <rect width="280" height="60" rx="8" fill="#faf7f2" stroke="#ede5da"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#b45309">Microservice Topology DAG</text>
-      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">25 Services • 26 Dependencies • CALLS edges</text>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Microservice Topology DAG</text>
+      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">25 Services • 26 Dependencies • CALLS edges</text>
     </g>
 
     <!-- Sub item 2: Company Brain -->
     <g transform="translate(20, 140)">
       <rect width="280" height="60" rx="8" fill="#faf7f2" stroke="#ede5da"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#c2410c">Company Brain (Knowledge Graph)</text>
-      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">Engineers • PR Diffs • Jira Tickets • Slack Logs</text>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Company Brain (Knowledge Graph)</text>
+      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">Engineers • PR Diffs • Jira Tickets • Slack Logs</text>
     </g>
 
     <!-- Sub item 3: Playbooks -->
     <g transform="translate(20, 212)">
       <rect width="280" height="60" rx="8" fill="#faf7f2" stroke="#ede5da"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#92400e">Procedural Memory (Playbooks)</text>
-      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">Chained Action workflows: STEP -&gt; NEXT</text>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Procedural Memory (Playbooks)</text>
+      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">Chained Action workflows: STEP -&gt; NEXT</text>
     </g>
 
     <!-- Sub item 4: Memory -->
     <g transform="translate(20, 284)">
       <rect width="280" height="60" rx="8" fill="#faf7f2" stroke="#ede5da"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#047857">Episodic &amp; Semantic Memory</text>
-      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">Past incident solutions • Failure Ontologies</text>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Episodic &amp; Semantic Memory</text>
+      <text x="16" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">Past incident solutions • Failure Ontologies</text>
     </g>
   </g>
 
   <!-- Box 2: Autonomous Tri-Agent Swarm (Highlighted Card) -->
   <g transform="translate(440, 95)" filter="url(#swarmShadow)">
     <rect width="320" height="375" rx="14" fill="url(#swarmBg)" stroke="#ea580c" stroke-width="1.8"/>
-    <rect x="0" y="0" width="320" height="48" rx="14" fill="#faeee0"/>
+    <rect x="0" y="0" width="320" height="48" rx="14" fill="#fbf0e6"/>
     <rect x="20" y="16" width="16" height="16" rx="4" fill="#ea580c"/>
-    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#7c2d12">2. Autonomous Tri-Agent Swarm</text>
+    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#0f172a">2. Autonomous Tri-Agent Swarm</text>
 
     <!-- Agent 1: Sentinel -->
     <g transform="translate(20, 68)">
       <rect width="280" height="85" rx="8" fill="#ffffff" stroke="#fcd3bd"/>
       <circle cx="24" cy="24" r="8" fill="#dc2626"/>
-      <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#b91c1c">Sentinel Agent</text>
-      <text x="16" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#4b3e34">Multi-hop graph walk for affected area</text>
-      <text x="16" y="68" font-family="monospace" font-size="10" fill="#9a3412">shortestPath((src)-[:CALLS*]->(dst))</text>
+      <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Sentinel Agent</text>
+      <text x="16" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#334155">Multi-hop graph walk for affected area</text>
+      <rect x="16" y="58" width="248" height="18" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="22" y="71" font-family="monospace" font-size="10" font-weight="600" fill="#b91c1c">shortestPath((src)-[:CALLS*]->(dst))</text>
     </g>
 
     <!-- Agent 2: Investigator -->
     <g transform="translate(20, 165)">
       <rect width="280" height="85" rx="8" fill="#ffffff" stroke="#fcd3bd"/>
       <circle cx="24" cy="24" r="8" fill="#d97706"/>
-      <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#b45309">Investigator Agent</text>
-      <text x="16" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#4b3e34">Correlates failing pods with git commits</text>
-      <text x="16" y="68" font-family="monospace" font-size="10" fill="#9a3412">MATCH (pr)-[:MODIFIED_SERVICE]->(s)</text>
+      <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Investigator Agent</text>
+      <text x="16" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#334155">Correlates failing pods with git commits</text>
+      <rect x="16" y="58" width="248" height="18" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="22" y="71" font-family="monospace" font-size="10" font-weight="600" fill="#c2410c">MATCH (pr)-[:MODIFIED_SERVICE]->(s)</text>
     </g>
 
     <!-- Agent 3: Mitigator -->
     <g transform="translate(20, 262)">
       <rect width="280" height="95" rx="8" fill="#ffffff" stroke="#fcd3bd"/>
       <circle cx="24" cy="24" r="8" fill="#059669"/>
-      <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#047857">Mitigator Agent</text>
-      <text x="16" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#4b3e34">Human-in-the-Loop Safety signoff</text>
-      <text x="16" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#4b3e34">Executes repair via Model Context Protocol</text>
-      <text x="16" y="86" font-family="monospace" font-size="10" fill="#065f46">mcp_k8s:rollout_restart</text>
+      <text x="40" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Mitigator Agent</text>
+      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#334155">Human-in-the-Loop Safety signoff</text>
+      <text x="16" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#334155">Executes repair via Model Context Protocol</text>
+      <rect x="16" y="72" width="160" height="18" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="22" y="85" font-family="monospace" font-size="10" font-weight="600" fill="#047857">mcp_k8s:rollout_restart</text>
     </g>
   </g>
 
   <!-- Box 3: Outcomes & Observability -->
   <g transform="translate(820, 95)" filter="url(#subtleShadow)">
-    <rect width="320" height="375" rx="14" fill="url(#cardBg)" stroke="#e3dacd" stroke-width="1.2"/>
-    <rect x="0" y="0" width="320" height="48" rx="14" fill="#f7f2eb"/>
+    <rect width="320" height="375" rx="14" fill="url(#cardBg)" stroke="#e2d9cd" stroke-width="1.2"/>
+    <rect x="0" y="0" width="320" height="48" rx="14" fill="#f8f4ee"/>
     <rect x="20" y="16" width="16" height="16" rx="4" fill="#059669"/>
-    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#241a14">3. Real-Time Observability</text>
+    <text x="46" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#0f172a">3. Real-Time Observability</text>
 
-    <!-- Metrics Highlight: Mint / Sage Card with Deep Emerald Numbers -->
+    <!-- Metrics Highlight: Sage Green Card with Bold Dark Emerald -->
     <g transform="translate(20, 68)">
       <rect width="280" height="80" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
       <text x="16" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#065f46">MEAN TIME TO REMEDIATION (MTTR)</text>
-      <text x="16" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="900" fill="#059669">18.4s</text>
-      <text x="120" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#374151">vs 45 min manual triage</text>
+      <text x="16" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="900" fill="#047857">18.4s</text>
+      <text x="120" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#334155">vs 45 min manual triage</text>
     </g>
 
     <!-- Cytoscape Canvas -->
     <g transform="translate(20, 160)">
       <rect width="280" height="90" rx="8" fill="#faf7f2" stroke="#ede5da"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#c2410c">Live Cytoscape Dynamic Canvas</text>
-      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">• Glowing animated traversal paths</text>
-      <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">• Multi-graph isolation (prod / staging)</text>
-      <text x="16" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">• Sub-millisecond SSE reasoning stream</text>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Live Cytoscape Dynamic Canvas</text>
+      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">• Glowing animated traversal paths</text>
+      <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">• Multi-graph isolation (prod / staging)</text>
+      <text x="16" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">• Sub-millisecond SSE reasoning stream</text>
     </g>
 
     <!-- Postmortems -->
     <g transform="translate(20, 262)">
       <rect width="280" height="95" rx="8" fill="#faf7f2" stroke="#ede5da"/>
-      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#b45309">Automated Postmortems</text>
-      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">• Root-cause attribution to PR &amp; author</text>
-      <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">• Preventive CI/CD action items</text>
-      <text x="16" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#786c5e">• Saved to FalkorDB for next time</text>
+      <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Automated Postmortems</text>
+      <text x="16" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">• Root-cause attribution to PR &amp; author</text>
+      <text x="16" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">• Preventive CI/CD action items</text>
+      <text x="16" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#475569">• Saved to FalkorDB for next time</text>
     </g>
   </g>
 </svg>
