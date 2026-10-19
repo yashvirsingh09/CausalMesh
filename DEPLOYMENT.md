@@ -89,8 +89,8 @@ For single-server deployment (AWS EC2, DigitalOcean Droplet, Linode, Hetzner, et
 
 ```bash
 # Clone the repository
-git clone https://github.com/yashv/causalmesh.git
-cd causalmesh
+git clone https://github.com/yashvirsingh09/CausalMesh.git
+cd CausalMesh
 
 # Build and start all 3 services: FalkorDB + Backend + Frontend
 docker compose up --build -d
@@ -125,7 +125,7 @@ docker compose down
 
 #### Windows (PowerShell):
 ```powershell
-.\run-dev.ps1
+powershell -ExecutionPolicy Bypass -File .\run-dev.ps1
 ```
 *Automatically sets up virtual environment, installs dependencies, launches FastAPI backend on `:8000`, and launches Next.js frontend on `:3001`.*
 
@@ -154,7 +154,8 @@ python -m venv venv
 
 # Activate virtual environment
 # Windows:
-venv\Scripts\activate
+.\venv\Scripts\activate
+# (If PowerShell blocks script execution, run: Set-ExecutionPolicy -Scope Process Bypass or use .\venv\Scripts\python.exe main.py)
 # Linux/macOS:
 source venv/bin/activate
 

@@ -96,7 +96,7 @@ CREATE (ep)-[:INVOLVED]->(inv)
 ### 2. Startup (Backend + Frontend)
 - **On Windows (PowerShell):**
   ```powershell
-  .\run-dev.ps1
+  powershell -ExecutionPolicy Bypass -File .\run-dev.ps1
   ```
 - **On Linux / macOS:**
   ```bash
@@ -110,7 +110,12 @@ CREATE (ep)-[:INVOLVED]->(inv)
 ```bash
 cd backend
 python -m venv venv
-venv\Scripts\activate   # Windows (or: source venv/bin/activate on Linux/Mac)
+
+# Windows (or: source venv/bin/activate on Linux/Mac)
+.\venv\Scripts\activate
+# Tip: If PowerShell blocks script execution, use .\venv\Scripts\python.exe directly:
+# .\venv\Scripts\python.exe main.py
+
 pip install -r requirements.txt
 
 # Run all 37 unit and integration tests (37/37 passing in ~31s)
