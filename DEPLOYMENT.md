@@ -180,6 +180,7 @@ npm install
 
 # Start Next.js development server
 npm run dev
+# (On Windows PowerShell, use npm.cmd run dev if npm is not directly recognized)
 ```
 Open `http://localhost:3001` in your browser.
 
