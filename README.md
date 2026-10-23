@@ -48,6 +48,32 @@ Modern cloud engineering teams run hundreds of interconnected microservices. Whe
 
 ---
 
+## Enterprise Integrations & Shift-Left Architecture Guard
+
+CausalMesh is engineered for production enterprise deployment with ready-to-use inbound and outbound integrations:
+
+- **Inbound Webhook Ingestion (`/api/v1/webhooks/*`):**
+  - **PagerDuty (v2/v3):** Directly triggers the Tri-Agent Swarm upon firing incident events.
+  - **Datadog Alerts:** Ingests metric monitor threshold violations and service tags.
+  - **Prometheus Alertmanager:** Normalizes firing alerts and initiates FalkorDB topological pathfinding.
+  - **Generic SRE Webhook:** Standard enterprise JSON endpoint for custom monitoring tools and CloudWatch.
+
+- **Shift-Left Preventative CI/CD (`/api/v1/integrations/github/*`):**
+  - **GitHub Architecture Guard:** Analyzes pull request diffs before merge, queries FalkorDB for downstream dependency blast radiuses, and posts automated risk assessments directly into PR comments.
+  - Includes ready `.github/workflows/causalmesh-guard.yml` for automated CI/CD pipeline enforcement.
+
+- **Interactive Slack War-Room Bot (`/api/v1/integrations/slack/*`):**
+  - Dispatches Slack Block Kit incident cards with real-time blast radius and root-cause PR attributions.
+  - Provides interactive **[Approve Remediation]** and **[Reject]** buttons for Human-in-the-Loop governance.
+
+- **Live Kubernetes & OpenTelemetry Discovery (`/api/v1/discovery/sync`):**
+  - Automatically queries Kubernetes Core and Apps APIs to discover live services, pods, and inter-service environment links, syncing them directly into FalkorDB.
+
+- **Cryptographic Audit Trail (`/api/v1/audit/trail`):**
+  - Every executed MCP remediation action generates an immutable SHA-256 cryptographic hash recording the tool, parameters, timestamp, and status.
+
+---
+
 ## FalkorDB Data Model
 
 ```cypher

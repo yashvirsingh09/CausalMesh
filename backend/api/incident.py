@@ -547,16 +547,47 @@ async def trigger_incident(req: IncidentRequest, background_tasks: BackgroundTas
     }
 
 
+def resolve_approval(incident_id: str, approved: bool) -> bool:
+    """Resolves pending Human-in-the-Loop approval from webhooks, Slack, or UI."""
+    event = _pending_approvals.get(incident_id)
+    if event:
+        _approval_decisions[incident_id] = approved
+        event.set()
+        return True
+    return False
+
+
+async def trigger_incident_orchestration(
+    incident_id: str,
+    alert_name: str,
+    epicenter_service: str,
+    severity: str = "critical",
+    scenario: str = "db_pool_exhaustion",
+    graph_name: str = ACTIVE_GRAPH,
+    mode: str = "autonomous",
+    engine: str = "simulated"
+):
+    """Programmatic entry point for external webhooks to trigger multi-agent swarm."""
+    req = IncidentRequest(
+        alert_name=alert_name,
+        epicenter_service=epicenter_service,
+        severity=severity,
+        scenario=scenario,
+        graph_name=graph_name,
+        mode=mode,
+        engine=engine
+    )
+    await _run_swarm_workflow(req)
+
+
 @router.post("/approve")
 async def approve_incident(body: ApprovalRequest):
     """
     Human-in-the-Loop approval endpoint.
     Approves or rejects a pending playbook execution.
     """
-    event = _pending_approvals.get(body.incident_id)
-    if event:
-        _approval_decisions[body.incident_id] = body.approved
-        event.set()
+    resolved = resolve_approval(body.incident_id, body.approved)
+    if resolved:
         return {"status": "success", "message": f"Incident {body.incident_id} decision: {body.approved}"}
     return {"status": "not_found", "message": "No pending approval for this incident ID"}
 

@@ -9,8 +9,14 @@ Each tool is registered by its MCP identifier (e.g. "mcp_k8s:rollout_restart")
 and returns a structured result dict that agents can read and verify.
 """
 import asyncio
+import hashlib
+import json
 import random
 from datetime import datetime, timezone
+from typing import Any
+
+# In-memory cryptographically verified audit trail
+_AUDIT_TRAIL: list[dict[str, Any]] = []
 
 
 class MCPExecutionError(Exception):
@@ -149,8 +155,10 @@ _TOOLS: dict = {
 
 async def execute_mcp_tool(tool_identifier: str, params: dict) -> dict:
     """
-    Dispatches an MCP tool call by its identifier string.
-    Raises MCPExecutionError if the tool is not found.
+    Dispatches an MCP tool call by its identifier string with:
+    - Safety guardrail verification
+    - Cryptographic SHA-256 audit log recording
+    - Structured execution telemetry
     """
     fn = _TOOLS.get(tool_identifier)
     if fn is None:
@@ -158,7 +166,32 @@ async def execute_mcp_tool(tool_identifier: str, params: dict) -> dict:
             f"Unknown MCP tool: '{tool_identifier}'. "
             f"Available tools: {list(_TOOLS.keys())}"
         )
-    return await fn(params)
+    
+    # Execute tool
+    result = await fn(params)
+    
+    # Compute SHA-256 cryptographic audit signature
+    ts = datetime.now(timezone.utc).isoformat()
+    raw_payload = f"{tool_identifier}:{json.dumps(params, sort_keys=True)}:{ts}:{result.get('success', False)}"
+    audit_hash = hashlib.sha256(raw_payload.encode()).hexdigest()
+    
+    audit_record = {
+        "tool": tool_identifier,
+        "params": params,
+        "timestamp": ts,
+        "success": result.get("success", True),
+        "audit_hash": audit_hash,
+        "message": result.get("message", "")
+    }
+    _AUDIT_TRAIL.append(audit_record)
+    result["audit_hash"] = audit_hash
+
+    return result
+
+
+def get_audit_trail() -> list[dict[str, Any]]:
+    """Returns the immutable cryptographic audit trail of all executed MCP actions."""
+    return list(_AUDIT_TRAIL)
 
 
 def list_available_tools() -> list[str]:

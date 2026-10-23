@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from mcp.executor import get_audit_trail
 from config import (
     APP_ENV,
     ACTIVE_GRAPH,
@@ -22,6 +23,10 @@ from graph import seed
 from api.graph import router as graph_router
 from api.incident import router as incident_router
 from api.stream import router as stream_router
+from integrations.webhooks import router as webhooks_router
+from integrations.slack import router as slack_router
+from integrations.github_pr import router as github_router
+from integrations.k8s_discovery import router as discovery_router
 
 
 @asynccontextmanager
@@ -71,6 +76,12 @@ app.include_router(graph_router, prefix="/api")
 app.include_router(incident_router, prefix="/api")
 app.include_router(stream_router, prefix="/api")
 
+# Enterprise Integrations & Webhooks
+app.include_router(webhooks_router)
+app.include_router(slack_router)
+app.include_router(github_router)
+app.include_router(discovery_router)
+
 
 @app.get("/")
 def root():
@@ -104,6 +115,17 @@ def healthcheck():
             "provider": LLM_PROVIDER,
             "model": LLM_MODEL,
         },
+    }
+
+
+@app.get("/api/v1/audit/trail")
+def get_audit_trail_endpoint():
+    """Returns the immutable cryptographic audit trail of all executed MCP actions."""
+    trail = get_audit_trail()
+    return {
+        "status": "ok",
+        "count": len(trail),
+        "audit_trail": trail,
     }
 
 
